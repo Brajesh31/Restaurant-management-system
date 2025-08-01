@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    text-align: center;
+   
+ } 
+
+ /*.....dropdown.......*/
+
+
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #050505;
+
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+ .wrapper{
+    min-height:100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('about\ bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+ }
+ .social-media a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border:2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color:#0ef;
+    text-decoration: none;
+    margin:30px 15px 30px 0;
+    transition: 5s ease;
+}
+.social-media a:hover{
+    background: #0ef;
+    color:#1f242d;
+    box-shadow: 0 0 20px #0ef;
+
+}
+.testimonial
+{
+   padding:30px 100px ;
+}
+
+ article h1{
+    font-size: 50px;
+    font-weight: 800;
+    text-transform:uppercase;
+
+ }
+ article h5{
+    text-transform: uppercase;
+    font-size:28px;
+    margin-top:30px;
+letter-spacing: 1.5px;
+  }
+  article p{
+    font-size:17px;
+  }
+ blockquote{
+    font-family: sans-serif ;
+    font-size:22px ;
+    margin-top:30px;
+ }
+ article img{
+    height:150px;
+    width:150px;
+    border:2px solid #fff;
+    border-radius: 50%;
+    margin-top:60px;
+
+ }
+ article h1:after{
+    content:"";
+    height:5px;
+    width:225px;
+    background-color: #fff;
+    display: block;
+    margin:auto;;
+
+ }
+
+
+ /*............loginpage...........*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+header  {
+    max-width: 1600px;
+    width: 90%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 99;
+  
+
+}
+
+
+.logo  {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 7px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation  .loginBtn {
+    color: #fff;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    width: 127px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    margin-left: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navigation  .loginBtn:hover {
+    background-color: #fff;
+    color: #162938;
+}
+
+.loginBtnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: grey;
+    border: 2px solid #ffffff90;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 18px #ffffff90;
+    transform: scale(0);
+    overflow: hidden;
+    transition: transform 0.2s ease,height 0.2s ease;
+}
+
+.loginBtnWrapper .closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #162938;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+
+.loginBtnWrapper .formContainer {
+    width: 100%;
+    padding: 0 45px;
+}
+
+.formContainer h2 {
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+}
+
+.formContainer .inputBox {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-bottom: 2px solid #162938;
+    margin: 27px 0;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(0, -50%);
+    width: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #162938;
+    pointer-events: none;
+    transition: 0.2s ease;
+
+}
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color:#08071d;
+}
+
+.inputBox  .icon {
+    position: absolute;
+    right: 6%;
+    font-size: 1.2rem;
+    color: #162938;
+    line-height: 48px;
+}
+
+.inputBox input:focus~label, 
+.inputBox input:valid~label {
+    top: -6%;
+}
+
+.rememberMe-forgotPassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #162938;
+    margin: 0 3px;
+}
+
+.rememberMe-forgotPassword label input {
+    accent-color: #162938;
+    margin-right: 6px;
+}
+
+.rememberMe-forgotPassword a{
+    color: #162938;
+    text-decoration: none;
+}
+
+.rememberMe-forgotPassword a:hover {
+    text-decoration: underline;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #162938;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+.registerLinkBox, .loginLinkBox{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #162938;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.registerLinkBox .registerLink, .loginLinkBox .loginLink{
+    color: #162938;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registerLinkBox .registerLink:hover, .loginLinkBox .loginLink:hover {
+    text-decoration: underline;
+}
+
+.loginBtnWrapper .loginform{
+    transform: translateX(0);
+    transition: transform 0.18s ease;
+}
+.loginBtnWrapper .registerform {
+    position: absolute;
+    transform: none;
+    transform: translateX(450px);
+}
+
+.loginBtnWrapper.active{
+    height: 540px;
+}
+
+.loginBtnWrapper.active .loginform {
+    transform: translateX(-450px);
+    transition: none;
+}
+
+.loginBtnWrapper.active .registerform {
+    transform: translateX(0);
+    transition: transform 0.18s ease;
+}
+
+.loginBtnWrapper.activeLoginBtnWrapper{
+    transform: scale(1);
+}
+
+
+/*.......contactpage........*/
+
+
+.container{
+    min-height:50vh;
+    background:#08071d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url("contact\ bg.jpg") no-repeat center center/cover;
+}
+.container form{
+    width:670px;
+    height:400px;
+    display:flex;
+    justify-content:center;
+    box-shadow:20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    background:rgba(225,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap:wrap;
+}
+.container form h1{
+    color:#fff;
+    font-weight:500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+.container form input{
+    width: 290px;
+    height:40px;
+    padding-left: 10px;
+    outline:none;
+    border:none;
+    font-size:15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+
+}
+.container form input::placeholder
+{
+    color: #ddd;
+}
+.container form #lastname,
+.container form #mobile
+{
+    margin-left:20px;
+}
+.container form h4{
+    color:#fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+.container form textarea{
+    background:none;
+    border:none;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding:10px;
+    outline:none;
+    min-width: 600px;
+max-width: 600px;
+min-height: 80px;
+max-height: 80px;
+}
+.container form #button
+{
+    border:none;
+    background:white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size:20px;
+    color: #333;
+    padding:0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition:0.3s;
+}
+.container form #button:hover{
+    opacity:0.7;
+}
+.textarea::-webkit-scrollbar
+{
+    width: 1em;
+}
+.textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+
+/*......menu page...........*/
+
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}   
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; 
+}
+ 
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli ;
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+}
+  
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    object-position: cover;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color:#fac031
+}
+
+ .menu .menu_box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+ }  
+
+ .menu .menu_box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+ }
+
+ .menu .menu_box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 10px;
+ }
+
+ .menu .menu_box .menu_card .menu_info .menu_icon1{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 20px 0;
+ }
+
+ .menu .menu_box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+ }
